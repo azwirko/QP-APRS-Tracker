@@ -1,0 +1,55 @@
+*,
+:after,
+:before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #f1f1f1;
+}
+
+/* APRS Map Stuff */
+table, th, td {
+    border: 1px solid black;
+    font-size: 12px;
+}
+
+.layout {
+  width: 300px;
+  height: 600px;
+
+  display: grid;
+    grid:
+      "header header header" 5%
+      "leftSide body rightSide" 90%
+      "footer footer footer" 5%
+      / 15% 80% 5%;
+    gap: 8px;
+  }
+
+  .header { grid-area: header; }
+  .leftSide { grid-area: leftSide; }
+  .body { grid-area: body; }
+  .rightSide { grid-area: rightSide; }
+  .footer { grid-area: footer; }
+
+

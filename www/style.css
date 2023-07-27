@@ -1,0 +1,235 @@
+*,
+:after,
+:before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #f1f1f1;
+}
+
+/* Layer Stuff */
+ul {
+  margin: 10px;
+  padding: 0;
+  list-style-type: none;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column; 
+}
+
+.layers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+  gap: 10px;
+}
+
+.leaflet-marker-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  color: #fff;
+  font-size: 11px;
+  line-height: 16px;
+  box-shadow: 0px 0px 0px rgba(0, 132, 255, 1);
+  border-radius: 100%;
+  border: 2px solid #0000ff;
+  padding: 1px;
+}
+
+.qso-party,
+.qso-party.search-tip b,
+.qso-party.leaflet-marker-icon {
+  background: #be4dff;
+}
+
+.non-qso-party,
+.non-qso-party.search-tip b,
+.non-qso-party.leaflet-marker-icon {
+  background: #ff8146;
+}
+
+/* checkbox */
+input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #555555;
+  background-clip: content-box;
+  padding: 3px;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #525252;
+}
+
+.layer-element > span {
+  border: 1px soslid red;
+}
+
+
+
+/* Home Stuff */
+.marker-position {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  padding: 10px;
+  font-weight: 700;
+  background-color: #fff;
+}
+
+.back-to-home {
+  cursor: pointer;
+  padding: 1px;
+  background: #fff;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 65%);
+}
+
+.to-nva {
+  cursor: pointer; 
+  padding: 1px;
+  background: #fff;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 65%);
+}
+
+.to-seva {
+  cursor: pointer; 
+  padding: 1px;
+  background: #fff;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 65%);
+}
+
+.to-swva {
+  cursor: pointer; 
+  padding: 1px;
+  background: #fff;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 65%);
+}
+
+.to-cva {
+  cursor: pointer; 
+  padding: 1px;
+  background: #fff;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 65%);
+}
+
+.leaflet-touch .back-to-home {
+  width: 34px;
+  height: 34px;
+}
+
+.leaflet-touch .to-nva {
+  width: 34px;
+  height: 34px;
+}
+
+.leaflet-touch .to-seva {
+  width: 34px;
+  height: 34px;
+}
+
+.leaflet-touch .to-swva {
+  width: 34px;
+  height: 34px;
+}
+
+.leaflet-touch .to-cva {
+  width: 34px;
+  height: 34px;
+}
+
+.hidden {
+  display: none;
+}
+
+
+/* Marker Stuff */
+.marker-click {
+  text-decoration: none;
+  color: red;
+}
+
+.marker-click:hover {
+  margin-bottom: 3px;
+  border-bottom: 2px solid red;
+}
+
+@media (min-width: 400px) {
+  .marker-click {
+    margin: 5px 10px;
+  }
+}
+
+.active {
+  text-decoration: underline;
+}
+
+
+/* APRS Map Stuff */
+table, th, td {
+    border: 1px solid black;
+    font-size: 12px;
+}
+
+.layout {
+  width: 1200px;
+  height: 800px;
+
+  display: grid;
+    grid:
+      "header header header" 5%
+      "leftSide body rightSide" 90%
+      "footer footer footer" 5%
+      / 15% 80% 5%;
+    gap: 8px;
+  }
+
+  .header { grid-area: header; }
+  .leftSide { grid-area: leftSide; }
+  .body { grid-area: map; }
+  .rightSide { grid-area: rightSide; }
+  .footer { grid-area: footer; }
+
+

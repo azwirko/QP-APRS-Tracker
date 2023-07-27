@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="refresh" content="1800">
+
+    <title>K1RA QP APRS Tracker</title>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet-src.js"></script>
+    <script src="https://unpkg.com/leaflet.markercluster@1.0.6/dist/leaflet.markercluster-src.js"></script>
+    <script src="https://unpkg.com/leaflet.featuregroup.subgroup"></script>
+
+    <script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.3.1/leaflet-omnivore.min.js'></script>
+
+<!--    <script src="leaflet-realtime.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-realtime/2.2.0/leaflet-realtime.min.js"></script>
+	
+<!--    <script src="leaflet.ajax.min.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.0.6/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.0.6/dist/MarkerCluster.Default.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css" />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+      <section class="layout">
+          
+          <div class="header"><center><h3>Live QP APRS Tracker - <a
+          href="https://k1ra.us/2023/03/10/new-vaqp-aprs-tracker-for-2023/"
+              target="_blank">Read info here</a> - or email k1ra@k1ra.us</center></div>
+
+          <div class="leftSide"><h3><center><a href="https://k1ra.us/vaqp-aprs-mini/"
+          target="_blank">QP Mini Tracker</a></center></h3><p><table id="t1"></table></br>
+          Table shows only QP calls and their C&IC, time in county and
+          beacon/spot age in minutes.</br> <strong>Bold call</strong> = new C&IC</br>
+          Add <strong>QP</strong> to your <strong>APRS Beacon</strong> message
+          to participate. </br>Updates = every 30 secs.
+          
+          </div>
+
+<!--          <div class="marker-position">Click or Zoom map (30sec. updates)</div>
+-->
+
+          <div class="container">
+              <div id="map"></div>
+              <ul class="layers"></ul>
+          </div>
+          
+          <script src="script.js"></script>
+
+<!--          <div class="rightSide"><div id="content"></div></div>
+-->
+<!--
+          <div class="footer"><center>
+              <h3>Email k1ra@k1ra.us for more info.</h3></center>
+          </div>
+-->    
+          <div class="footer"><center>
+            Click left buttons to zoom to state areas. 
+            Click colored circles to expand multiple calls. 
+            Click counties for names. 
+            Calls age out after 4 hrs. of inactivity
+            </center>
+          </div>
+
+      </section>
+        
+  </body>
+</html>
