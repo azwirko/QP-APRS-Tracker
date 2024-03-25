@@ -13,7 +13,7 @@ Updated 07-25-23
         County KML from NO5W for county boundaries
         arGeoDetector by Rich K3FRG for determining county names
 
-./APRSGeoDetector.py --cli -a noam.aprs2.net -t 14580 -b boundaries/OverlayVirginiaRev4.kml -o 1800 -s vaqp-calls.txt
+./QP-APRS-Tracker.py --cli -a noam.aprs2.net -t 14580 -b boundaries/OverlayVirginiaRev4.kml -o 1800 -s vaqp-calls.txt
 """
 import json
 import os
